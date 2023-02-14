@@ -16,10 +16,10 @@
 # inherit from common
 include device/samsung/universal8890-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/samsung/hero2lte
+DEVICE_PATH := device/samsung/gracelte
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := hero2ltebmc,hero2lteskt,hero2ltektt,hero2ltelgt,hero2ltexx,hero2lte
+TARGET_OTA_ASSERT_DEVICE := graceltexx,gracelte
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
@@ -28,11 +28,11 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 TARGET_SEC_FP_USES_PERCENTAGE_SAMPLES := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_hero2lte
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_gracelte
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/samsung/universal8890
-TARGET_KERNEL_CONFIG := exynos8890-hero2lte_defconfig
+TARGET_KERNEL_CONFIG := exynos8890-gracelte_defconfig
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
@@ -46,4 +46,4 @@ PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 VENDOR_SECURITY_PATCH := 2021-04-01
 
 # inherit from the proprietary version
-include vendor/samsung/hero2lte/BoardConfigVendor.mk
+include vendor/samsung/gracelte/BoardConfigVendor.mk

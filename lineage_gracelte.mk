@@ -19,24 +19,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # Inherit from hero2lte device
-$(call inherit-product, device/samsung/hero2lte/device.mk)
+$(call inherit-product, device/samsung/gracelte/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := hero2lte
-PRODUCT_NAME := lineage_hero2lte
+PRODUCT_DEVICE := gracelte
+PRODUCT_NAME := lineage_gracelte
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-G935F
+PRODUCT_MODEL := SM-N930F
 PRODUCT_MANUFACTURER := samsung
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
 # Use the latest approved GMS identifiers
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=hero2ltexx \
-    PRIVATE_BUILD_DESC="hero2ltexx-user 8.0.0 R16NW G935FXXU2ERD5 release-keys"
+    PRODUCT_NAME=graceltexx \
+    PRIVATE_BUILD_DESC="graceltexx-user 6.0.1 MMB29K N930FXXU2BPI7 release-keys"
 
-BUILD_FINGERPRINT := samsung/hero2ltexx/hero2lte:8.0.0/R16NW/G935FXXU2ERD5:user/release-keys
+BUILD_FINGERPRINT := samsung/graceltexx/gracelte:6.0.1/MMB29K/N930FXXU2BPI7:user/release-keys
